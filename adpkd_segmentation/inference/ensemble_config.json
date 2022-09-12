@@ -1,0 +1,60 @@
+{
+    "group": "pkd",
+    "config_code": " --config_path ",
+    "input_code": " -i ",
+    "output_code": " -o ",
+    "env": "",
+    "pipeline_path": "",
+    "python_cmd": "python adpkd_segmentation/inference/inference.py",
+    "destination": "",
+    "add_organ_color": [
+        2,
+        4,
+        8
+    ],
+    "add_overlap": [
+        6,
+        10,
+        12,
+        14
+    ],
+    "recolor": [
+        1,
+        2,
+        8,
+        8
+    ],
+    "recolor_spleen": [
+        8,
+        3
+    ],
+    "inference_ensemble_color": [
+        2,
+        4,
+        3
+    ],
+    "youngest_child": "ITKSNAP_DCM_NIFTI",
+    "dicom_ext": ".dcm",
+    "pred_vol": "pred_vol.nii",
+    "combined_folder": "multiorgan_ensemble",
+    "combined_pred_filename": "comb_pred_vol.nii",
+    "organ_name": [
+        "kidney",
+        "liver",
+        "spleen"
+    ],
+    "model_name": [
+        "adpkd",
+        "liver",
+        "spleen"
+    ],
+    "model_dir": {
+        "T2": {
+            "Axial": [
+                "checkpoints/kidney_model.yml",
+                "checkpoints/liver_model.yml",
+                "checkpoints/spleen_model.yml"
+            ]
+        }
+    }
+}
