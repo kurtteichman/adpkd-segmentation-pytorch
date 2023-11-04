@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import platform
 
-with open("requirements.txt") as f:
+with open("inference_requirements2.txt") as f:
     requirements = f.read().splitlines()
 
 if 'win' in platform.platform().lower():
